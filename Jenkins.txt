@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the repository from GitHub
+                git 'https://github.com/janhviii09/Pracexam.git'
+            }
+        }
+        stage('Deploy to Xampp') {
+            steps {
+                // Copy HTML files to Xampp htdocs directory
+                bat 'C:\xampp\htdocs'
+            }
+        }
+    }
+}
