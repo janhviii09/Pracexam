@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy to Xampp') {
             steps {
                 // Copy HTML files to Xampp htdocs directory
-                bat 'C:\xampp\htdocs'
+                bat '*.html C:\\xampp\\htdocs'
             }
         }
     }
